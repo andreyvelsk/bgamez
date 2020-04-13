@@ -1,57 +1,44 @@
 <template>
-    <div class="card-columns">
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />			
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />			
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			<Game :title="'Game1'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/M8wvA-wmIHVZLEbA1xt8oJK5mn8=/fit-in/200x150/pic1488707.jpg'" />
-			<Game :title="'Game2'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3BY5s1Vl3gKhto7nbBPWAj6UAUE=/fit-in/200x150/pic3576240.png'" />
-			<Game :title="'Game3'" :thumbnail="'https://cf.geekdo-images.com/thumb/img/3gk9i43I3UjBhv6vqQtMEEPRNhk=/fit-in/200x150/pic3673652.png'" />
-			
-    </div>
+  <div class="card-columns">
+    <Game
+      v-for="(game, key) in recGames"
+      :key="key"
+      :gameid="game.id"
+      :title="game.title"
+      :thumbnail="game.thumbnail"
+      :rating="game.bgggeekrating"
+    />
+  </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Game from '~/components/Games/Game.vue'
-
 export default {
   components: {
     Game
+  },
+  data () {
+    return {
+      awaitingSearch: false,
+      showSearchResults: false,
+      search: '',
+      userGame: {
+        id: '20047',
+        rating: 10
+      }
+    }
+  },
+  computed: {
+    ...mapState(['recGames'])
+  },
+  created () {
+    this.$store.dispatch('addUserGame', this.userGame)
   }
 }
 </script>
 
 <style lang="sass" scoped>
 .card-columns
-	column-count: 10
-	.card
-		border: none
-		color: #000
-		max-width: 15rem
-		font-size: 1rem
-		img
-				width: 100%
+  column-count: 8
 </style>
