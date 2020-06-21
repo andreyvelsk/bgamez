@@ -45,7 +45,7 @@ export const actions = {
       )
   },
   getRecomendations ({ state, commit, getters }) {
-    const QUERY = 'http://api.andreyvelsk.ru/recomendations'
+    const QUERY = 'http://api.boardgamefinder.test/recomendations'
     commit('setDataLoadingM', true)
     const data = {
       games: getters.gamesWithRating,
@@ -67,7 +67,7 @@ export const actions = {
   },
   getSearchGames ({ state, commit }, text) {
     if (text) {
-      const QUERY = 'http://api.andreyvelsk.ru/search/' + text
+      const QUERY = 'http://api.boardgamefinder.test/search/' + text
       this.$axios.$get(QUERY)
         .then((response) => {
           commit('setSearchGamesM', response)

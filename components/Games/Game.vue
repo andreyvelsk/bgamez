@@ -12,7 +12,7 @@
       <div class="lap mouseover" @click="addUserGame()">
         add
       </div>
-      <img :src="thumbnail" :alt="title">
+      <img :src="thumbSource" :alt="title">
     </a>
   </div>
 </template>
@@ -29,12 +29,16 @@ export default {
       default: 'Game title'
     },
     thumbnail: {
-      type: String,
-      default: 'https://cf.geekdo-images.com/micro/img/QZDNfKAPYlXkZg265NxdjgShBXY=/fit-in/64x64/pic1657689.jpg'
+      type: String
     },
     rating: {
       type: Number,
       default: 10
+    }
+  },
+  computed: {
+    thumbSource () {
+      return this.thumbnail || 'https://cf.geekdo-images.com/micro/img/QZDNfKAPYlXkZg265NxdjgShBXY=/fit-in/64x64/pic1657689.jpg'
     }
   },
   methods: {
@@ -54,4 +58,7 @@ export default {
     font-size: 1rem
     display: block
     background-color: transparent
+    .game
+      img
+        width: 100%
 </style>

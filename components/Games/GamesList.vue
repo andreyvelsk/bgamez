@@ -1,5 +1,5 @@
 <template>
-  <div class="card-columns">
+  <transition-group name="flip-list" tag="div" class="card-columns">
     <Game
       v-for="(game, key) in recGames"
       :key="key"
@@ -8,7 +8,7 @@
       :thumbnail="game.thumbnail"
       :rating="game.bgggeekrating"
     />
-  </div>
+  </transition-group>
 </template>
 
 <script>
@@ -40,5 +40,17 @@ export default {
 
 <style lang="sass" scoped>
 .card-columns
+  transition: all .5s
   column-count: 8
+.flip-list-move
+  transition: transform 1s
+.list-complete-item
+  transition: all 1s
+  display: inline-block
+  margin-right: 10px
+.list-complete-enter, .list-complete-leave-to
+  opacity: 0
+  transform: translateY(30px)
+.list-complete-leave-active
+  position: absolute
 </style>

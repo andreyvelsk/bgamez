@@ -2,13 +2,13 @@
   <a href="#" class="game game-input">
     <div class="lap visible">
       <div class="game-title">
-        {{ gamekey }}
+        {{ title }}
       </div>
     </div>
     <div class="lap mouseover" @click="deleteGame">
       X
     </div>
-    <img :src="thumbnail" :alt="title">
+    <img :src="thumbSource" :alt="title">
   </a>
 </template>
 
@@ -20,12 +20,16 @@ export default {
       default: 'Game title'
     },
     thumbnail: {
-      type: String,
-      default: 'https://cf.geekdo-images.com/micro/img/QZDNfKAPYlXkZg265NxdjgShBXY=/fit-in/64x64/pic1657689.jpg'
+      type: String
     },
     gamekey: {
       type: Number,
       default: 0
+    }
+  },
+  computed: {
+    thumbSource () {
+      return this.thumbnail || 'https://cf.geekdo-images.com/micro/img/QZDNfKAPYlXkZg265NxdjgShBXY=/fit-in/64x64/pic1657689.jpg'
     }
   },
   methods: {
@@ -50,7 +54,7 @@ export default {
     border-radius: 1rem
     box-shadow: 0 0 10px #444
     height: 100%
-    width: 100%
+    width: auto
   &-input
     max-height: 12.7rem
   &-title
