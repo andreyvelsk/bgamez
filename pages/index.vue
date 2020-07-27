@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid">
+  <div id="index" class="container-fluid" :class="{'data-loading': isLoading}">
     <TheHeader />
-    <div class="main-content" :class="{'data-loading': isLoading}">
+    <div class="main-content">
       <div class="main-title">
         <span>
           Recomendations
@@ -40,4 +40,6 @@ export default {
   opacity: 0.3
   pointer-events: none
   user-select: none
+#index
+  transition: all .5s
 </style>

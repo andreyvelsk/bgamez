@@ -48,8 +48,7 @@ export const actions = {
     const QUERY = 'http://api.boardgamefinder.test/recomendations'
     commit('setDataLoadingM', true)
     const data = {
-      games: getters.gamesWithRating,
-      coeff: state.postdata.coeff
+      games: getters.gamesWithRating
     }
     this.$axios.$post(QUERY, data)
       .then((response) => {
@@ -82,7 +81,7 @@ export const actions = {
         if (getters.gamesWithRating.length > 0) {
           dispatch('getRecomendations')
         } else {
-          commit('clearRecomendations')
+          dispatch('getRecomendations')
         }
       })
   },

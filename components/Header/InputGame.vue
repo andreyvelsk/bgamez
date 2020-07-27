@@ -1,15 +1,15 @@
 <template>
-  <a href="#" class="game game-input">
-    <div class="lap visible">
-      <div class="game-title">
-        {{ title }}
-      </div>
+  <div class="input-game mr-3 mb-3 h-100">
+    <div
+    class="input-game_body"
+    @click="deleteGame"
+    :style="'background-image: url()'">
+      {{ title }}
+      <span class="input-game_delete">
+        X
+      </span>
     </div>
-    <div class="lap mouseover" @click="deleteGame">
-      X
-    </div>
-    <img :src="thumbSource" :alt="title">
-  </a>
+  </div>
 </template>
 
 <script>
@@ -20,7 +20,8 @@ export default {
       default: 'Game title'
     },
     thumbnail: {
-      type: String
+      type: String,
+      default: null
     },
     gamekey: {
       type: Number,
@@ -40,47 +41,13 @@ export default {
 }
 </script>
 
-<style lang="sass">
-.game
-  position: relative
-  border-radius: 50px
-  color: #fff
-  font-size: 1.7rem
-  margin-right: 1rem
-  display: block
-  border-radius: 1rem
-  overflow: hidden
-  img
+<style lang="sass" scoped>
+  .input-game
     border-radius: 1rem
-    box-shadow: 0 0 10px #444
-    height: 100%
-    width: auto
-  &-input
-    max-height: 12.7rem
-  &-title
-    font-size: 1rem
-    padding: .5rem
-  .lap
-    position: absolute
-    border-radius: 1rem
-    display: flex
-    flex-direction: column
-    justify-content: center
-    text-align: center
-    align-items: center
-    height: 100%
-    width: 100%
-    opacity: 0
-    transition: all 0.2s
-    color: white
-  .visible
     background: rgba(0,0,0,.5)
     opacity: 1
-  .mouseover
-    background: rgba(0,0,0,.6)
-  &:hover
-    .visible
-      opacity: 0
-    .mouseover
-      opacity: 1
+    &_body
+      padding: .2rem 1rem
+      font-size: 1.2rem
+      cursor: pointer
 </style>

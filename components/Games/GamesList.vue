@@ -1,22 +1,25 @@
 <template>
-  <transition-group name="flip-list" tag="div" class="card-columns">
-    <Game
-      v-for="(game, key) in recGames"
-      :key="key"
-      :gameid="game.id"
-      :title="game.title"
-      :thumbnail="game.thumbnail"
-      :rating="game.bgggeekrating"
-    />
+  <transition-group name="flip-list" tag="div" class="row">
+    <div
+      class="col-lg-2 col-md-3 col-6 mb-5"
+      v-for="game in recGames"
+      :key="game.id">
+      <GameComponent
+        :gameid="game.id"
+        :title="game.title"
+        :thumbnail="game.thumbnail"
+        :rating="game.bgggeekrating"
+      />
+    </div>
   </transition-group>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import Game from '~/components/Games/Game.vue'
+import GameComponent from '~/components/Games/Game.vue'
 export default {
   components: {
-    Game
+    GameComponent
   },
   data () {
     return {

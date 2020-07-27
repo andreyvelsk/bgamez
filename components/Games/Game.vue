@@ -1,6 +1,6 @@
 <template>
-  <div class="card">
-    <a href="#" class="game game-input" tabIndex="-1">
+  <div class="card card-game h-100">
+    <a href="#" class="game game-input h-100" :style="`background-image: url(${thumbnail})`">
       <div class="lap visible">
         <div class="game-title">
           {{ title }}
@@ -12,7 +12,6 @@
       <div class="lap mouseover" @click="addUserGame()">
         add
       </div>
-      <img :src="thumbSource" :alt="title">
     </a>
   </div>
 </template>
@@ -29,7 +28,8 @@ export default {
       default: 'Game title'
     },
     thumbnail: {
-      type: String
+      type: String,
+      default: null
     },
     rating: {
       type: Number,
@@ -50,15 +50,50 @@ export default {
 }
 </script>
 
-<style lang="sass">
-.card
-    border: none
-    color: #000
-    max-width: 15rem
-    font-size: 1rem
-    display: block
-    background-color: transparent
-    .game
-      img
-        width: 100%
+<style lang="sass" scoped>
+.card-game
+  border: none
+  color: #000
+  font-size: 1rem
+  background-color: transparent
+  a
+    text-decoration: none
+.game
+  position: relative
+  border-radius: 50px
+  color: #fff
+  font-size: 2rem
+  display: block
+  border-radius: 1rem
+  overflow: hidden
+  background-size: cover
+  &-input
+    min-height: 12rem
+  &-title
+    font-size: 1.3rem
+    padding: .5rem
+  .lap
+    border-radius: 1rem
+    display: flex
+    flex-direction: column
+    justify-content: center
+    text-align: center
+    align-items: center
+    height: 100%
+    width: 100%
+    opacity: 0
+    transition: all 0.2s
+    color: white
+  .visible
+    background: rgba(0,0,0,.5)
+    opacity: 1
+  .mouseover
+    background: rgba(0,0,0,.6)
+    position: absolute
+    top: 0
+  &:hover
+    .visible
+      opacity: 0
+    .mouseover
+      opacity: 1
 </style>

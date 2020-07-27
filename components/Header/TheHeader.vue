@@ -3,7 +3,7 @@
     <div class="header-bar">
       <nav class="navbar">
         <div class="navbar-top">
-          <a class="navbar-brand-lg navbar-item">BGamez</a>
+          <a class="navbar-brand-lg navbar-item display-4">BGamez</a>
           <div class="navbar-search navbar-item">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search">
@@ -48,15 +48,15 @@ header
     &-top
       display: flex
       flex: 1
+      align-items: center
     &-item
       margin-right: 1rem
     &-search
       flex: 1
-      input
-        height: 100%
     &-additional
       flex: 1
 
 .user-games
   display: flex
+  flex-wrap: wrap
 </style>
