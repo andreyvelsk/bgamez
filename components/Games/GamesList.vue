@@ -1,9 +1,10 @@
 <template>
   <transition-group name="flip-list" tag="div" class="row">
     <div
-      class="col-lg-2 col-md-3 col-6 mb-5"
       v-for="game in recGames"
-      :key="game.id">
+      :key="game.id"
+      class="col-lg-2 col-md-3 col-6 mb-5"
+    >
       <GameComponent
         :gameid="game.id"
         :title="game.title"
@@ -21,22 +22,8 @@ export default {
   components: {
     GameComponent
   },
-  data () {
-    return {
-      awaitingSearch: false,
-      showSearchResults: false,
-      search: '',
-      userGame: {
-        id: '20047',
-        rating: 10
-      }
-    }
-  },
   computed: {
     ...mapState(['recGames'])
-  },
-  created () {
-    this.$store.dispatch('addUserGame', this.userGame)
   }
 }
 </script>

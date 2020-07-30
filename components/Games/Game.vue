@@ -43,7 +43,7 @@ export default {
   },
   methods: {
     addUserGame () {
-      const userGame = { id: this.gameid, title: this.title, thumbnail: this.thumbnail, rating: 10 }
+      const userGame = { id: this.gameid, title: this.title, rating: 10 }
       this.$store.dispatch('addUserGame', userGame)
     }
   }

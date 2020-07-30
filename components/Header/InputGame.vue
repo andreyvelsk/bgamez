@@ -1,9 +1,10 @@
 <template>
   <div class="input-game mr-3 mb-3 h-100">
     <div
-    class="input-game_body"
-    @click="deleteGame"
-    :style="'background-image: url()'">
+      class="input-game_body"
+      :style="'background-image: url()'"
+      @click="deleteGame"
+    >
       {{ title }}
       <span class="input-game_delete">
         X

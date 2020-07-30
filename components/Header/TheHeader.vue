@@ -5,9 +5,7 @@
         <div class="navbar-top">
           <a class="navbar-brand-lg navbar-item display-4">BGamez</a>
           <div class="navbar-search navbar-item">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
+            <search-component />
           </div>
         </div>
       </nav>
@@ -30,9 +28,11 @@
 <script>
 import { mapState } from 'vuex'
 import InputGame from '~/components/Header/InputGame.vue'
+import SearchComponent from '~/components/Header/Search.vue'
 export default {
   components: {
-    InputGame
+    InputGame,
+    SearchComponent
   },
   computed: {
     ...mapState(['postdata'])
