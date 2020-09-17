@@ -7,7 +7,7 @@
     >
       {{ title }}
       <span class="input-game_delete">
-        X
+        &#10005;
       </span>
     </div>
   </div>
@@ -20,18 +20,9 @@ export default {
       type: String,
       default: 'Game title'
     },
-    thumbnail: {
-      type: String,
-      default: null
-    },
     gamekey: {
       type: Number,
       default: 0
-    }
-  },
-  computed: {
-    thumbSource () {
-      return this.thumbnail || 'https://cf.geekdo-images.com/micro/img/QZDNfKAPYlXkZg265NxdjgShBXY=/fit-in/64x64/pic1657689.jpg'
     }
   },
   methods: {

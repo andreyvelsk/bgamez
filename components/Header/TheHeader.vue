@@ -10,11 +10,10 @@
         </div>
       </nav>
       <div v-if="postdata.games.length" class="user-games">
-        <InputGame
+        <input-game
           v-for="(game, key) in postdata.games"
           :key="key"
           :title="game.title"
-          :thumbnail="game.thumbnail"
           :gamekey="key"
         />
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="card card-game h-100">
-    <a href="#" class="game game-input h-100" :style="`background-image: url(${thumbnail})`">
+    <div class="game game-input h-100" :style="`background-image: url(${thumbnail})`">
       <div class="lap visible">
         <div class="game-title">
           {{ title }}
@@ -12,7 +12,7 @@
       <div class="lap mouseover" @click="addUserGame()">
         add
       </div>
-    </a>
+    </div>
   </div>
 </template>
 
@@ -67,6 +67,7 @@ export default {
   border-radius: 1rem
   overflow: hidden
   background-size: cover
+  cursor: pointer
   &-input
     min-height: 12rem
   &-title

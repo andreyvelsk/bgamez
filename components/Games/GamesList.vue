@@ -1,5 +1,5 @@
 <template>
-  <transition-group name="flip-list" tag="div" class="row">
+  <div class="row">
     <div
       v-for="game in recGames"
       :key="game.id"
@@ -12,7 +12,7 @@
         :rating="game.bgggeekrating"
       />
     </div>
-  </transition-group>
+  </div>
 </template>
 
 <script>
@@ -24,23 +24,19 @@ export default {
   },
   computed: {
     ...mapState(['recGames'])
+  },
+  mounted () {
+    this.$store.dispatch('addUserGame', [])
   }
 }
 </script>
 
-<style lang="sass" scoped>
-.card-columns
-  transition: all .5s
-  column-count: 8
-.flip-list-move
-  transition: transform 1s
-.list-complete-item
-  transition: all 1s
-  display: inline-block
-  margin-right: 10px
-.list-complete-enter, .list-complete-leave-to
-  opacity: 0
-  transform: translateY(30px)
-.list-complete-leave-active
-  position: absolute
+<style lang="scss" scoped>
+.component-fade-enter-active, .component-fade-leave-active {
+  transition: opacity .3s ease;
+}
+.component-fade-enter, .component-fade-leave-to
+/* .component-fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}
 </style>

@@ -10,12 +10,10 @@ export const state = () => ({
 
 export const mutations = {
   addGameToListM (state, payload) {
-    const tmp = {}
-    Object.keys(payload).forEach(function (key) {
-      tmp[key] = payload[key]
-    })
-    state.postdata.games.push(tmp)
-    state.searchGames = []
+    if ('title' in payload && 'id' in payload) {
+      state.postdata.games.unshift(payload)
+      state.searchGames = []
+    }
   },
   setRecomendationsM (state, payload) {
     state.bayesRating = payload.attributes
